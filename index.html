@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Quest — Lo-fi Study Planner</title>
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@500;600;700&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1><span class="moon">🌙</span> Study Quest</h1>
+  <p class="sub">วางแผนอ่านหนังสือ เก็บ EXP แลกรางวัล — everything can start by yourself !!</p>
+</header>
+
+<div class="grid">
+  <!-- LEFT : profile + shop -->
+  <aside>
+    <div class="card">
+      <h2><span>🎧</span>Profile</h2>
+      <div class="avatar">📚</div>
+      <div class="stat"><span>Level</span><b id="pLevel">1</b></div>
+      <div class="stat"><span>EXP สะสมทั้งหมด</span><b id="pTotal">0</b></div>
+      <div class="stat"><span>EXP ใช้ได้</span><b id="pAvail">0</b></div>
+      <div class="xpbar"><div class="xpfill" id="xpFill"></div></div>
+      <div class="xplabel" id="xpLabel">0 / 100 สู่เลเวลถัดไป</div>
+    </div>
+
+    <div class="card">
+      <h2><span>🛒</span>Reward Shop</h2>
+      <div id="shop"></div>
+    </div>
+  </aside>
+
+  <!-- RIGHT : form + tasks -->
+  <main>
+    <div class="card">
+      <h2><span>✏️</span>เพิ่มภารกิจอ่านหนังสือ</h2>
+      <label for="fName">ชื่องาน / หัวข้อที่อ่าน</label>
+      <input id="fName" type="text" placeholder="เช่น สรุปบท DNA Replication">
+      <div class="row">
+        <div>
+          <label for="fSubj">วิชา</label>
+          <select id="fSubj">
+            <option>คณิตศาสตร์</option><option>ฟิสิกส์</option><option>เคมี</option>
+            <option>ชีววิทยา</option><option>ภาษาอังกฤษ</option><option>ภาษาไทย</option>
+            <option>สังคมศึกษา</option><option>คอมพิวเตอร์</option>
+          </select>
+        </div>
+        <div>
+          <label for="fCh">จำนวนบท</label>
+          <input id="fCh" type="number" min="1" value="1">
+        </div>
+      </div>
+      <label for="fMin">เวลาที่ใช้ / วางแผนจะใช้ (นาที)</label>
+      <input id="fMin" type="number" min="1" placeholder="เช่น 90">
+      <div class="btns">
+        <button class="b-calc" id="btnCalc">🧮 คำนวณความเร็ว</button>
+        <button class="b-save" id="btnSave">💾 บันทึกภารกิจ</button>
+      </div>
+      <div id="result"></div>
+    </div>
+
+    <div class="card">
+      <h2><span>🗒️</span>Tasks</h2>
+      <div id="taskList"></div>
+    </div>
+  </main>
+</div>
+</div>
+<div id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
