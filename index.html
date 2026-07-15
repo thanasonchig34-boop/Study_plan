@@ -67,19 +67,93 @@
     </aside>
 
     <!-- Right Panel -->
-    <main>
+    <!-- Right Panel -->
+<main>
 
-      <!-- Add Task -->
-      <div class="card">
-        ...
+  <!-- Add Task -->
+  <div class="card">
+
+    <h2><span>✏️</span>เพิ่มภารกิจอ่านหนังสือ</h2>
+
+    <label for="fName">ชื่องาน / หัวข้อที่อ่าน</label>
+    <input
+      id="fName"
+      type="text"
+      placeholder="เช่น สรุปบท DNA Replication"
+    >
+
+    <div class="row">
+
+      <div>
+        <label for="fSubj">วิชา</label>
+
+        <select id="fSubj">
+          <option>คณิตศาสตร์</option>
+          <option>ฟิสิกส์</option>
+          <option>เคมี</option>
+          <option>ชีววิทยา</option>
+          <option>ภาษาอังกฤษ</option>
+          <option>ภาษาไทย</option>
+          <option>สังคมศึกษา</option>
+          <option>คอมพิวเตอร์</option>
+        </select>
       </div>
 
-      <!-- Task List -->
-      <div class="card">
-        ...
+      <div>
+        <label for="fCh">จำนวนบท</label>
+        <input
+          id="fCh"
+          type="number"
+          min="1"
+          value="1"
+        >
       </div>
 
-    </main>
+    </div>
+
+    <label for="fMin">
+      เวลาที่ใช้ / วางแผนจะใช้ (นาที)
+    </label>
+
+    <input
+      id="fMin"
+      type="number"
+      min="1"
+      placeholder="เช่น 90"
+    >
+
+    <div class="btns">
+
+      <button
+        class="b-calc"
+        id="btnCalc"
+      >
+        🧮 คำนวณความเร็ว
+      </button>
+
+      <button
+        class="b-save"
+        id="btnSave"
+      >
+        💾 บันทึกภารกิจ
+      </button>
+
+    </div>
+
+    <div id="result"></div>
+
+  </div>
+
+  <!-- Task List -->
+  <div class="card">
+
+    <h2><span>🗒️</span>Tasks</h2>
+
+    <div id="taskList"></div>
+
+  </div>
+
+</main>
 
   </div>
 
